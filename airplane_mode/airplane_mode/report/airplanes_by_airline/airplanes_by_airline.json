@@ -1,0 +1,44 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2026-01-22 01:59:42.212198",
+ "custom_create_view": 0,
+ "custom_refresh_frequency": 0,
+ "custom_view_type": "Logical",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"airline\",\"Airplane\"],[\"_aggregate_column\",\"Airplane\"]],\"order_by\":\"`tabAirplane`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"airline\":120,\"_aggregate_column\":200},\"group_by\":{\"group_by\":\"`tabAirplane`.`airline`\",\"aggregate_function\":\"count\"}}",
+ "letter_head": null,
+ "modified": "2026-01-22 02:20:13.343840",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Airplanes By Airline",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Airplane",
+ "report_name": "Airplanes By Airline",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Fleet Manager"
+  },
+  {
+   "role": "Travel Agent"
+  },
+  {
+   "role": "Airport Authority Personnel"
+  },
+  {
+   "role": "Flight Crew Member"
+  }
+ ],
+ "timeout": 0
+}
