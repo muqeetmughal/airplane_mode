@@ -1,0 +1,74 @@
+
+<style>
+    .shop-card {
+        border: 1px solid #d1d5db;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+        padding: 22px;
+        background: #f9fafb;
+        transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .shop-card:hover {
+        box-shadow: 0 6px 18px rgba(44, 62, 80, 0.13);
+        transform: scale(1.02);
+    }
+    .shop-card .shop-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+    .shop-card .shop-icon {
+        font-size: 40px;
+        color: #3b82f6;
+        margin-right: 16px;
+    }
+    .shop-card .shop-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #374151;
+    }
+    .shop-card .shop-details {
+        font-size: 15px;
+        color: #6b7280;
+        margin-bottom: 8px;
+    }
+    .shop-card .shop-details span {
+        color: #2563eb;
+        font-weight: 500;
+    }
+    .shop-card .shop-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 18px;
+        background: #2563eb;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        transition: background 0.2s;
+    }
+    .shop-card .shop-link:hover {
+        background: #1d4ed8;
+    }
+</style>
+
+<div class="shop-card">
+    <div class="shop-header">
+        <i class="fas fa-store shop-icon"></i>
+        <div class="shop-title">{{ doc.shop_name }}</div>
+    </div>
+    <div class="shop-details">
+        <span>Shop Code:</span> {{ doc.shop_code }}
+    </div>
+    <div class="shop-details">
+        <span>Airport:</span> {{ doc.airport }}
+    </div>
+    <div class="shop-details">
+        <span>Monthly Rent:</span> {{ doc.monthly_rent }}
+    </div>
+    <div class="shop-details">
+        <span>Status:</span> {{ doc.status }}
+    </div>
+    <a href="/shops/{{ doc.name }}" class="shop-link">View Details</a>
+</div>

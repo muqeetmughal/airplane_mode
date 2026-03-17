@@ -20,9 +20,10 @@
   "amended_from",
   "seat",
   "section_break_epzu",
-  "add_ons",
   "flight_price",
-  "total_amount"
+  "gate_number",
+  "total_amount",
+  "add_ons"
  ],
  "fields": [
   {
@@ -31,7 +32,8 @@
    "in_list_view": 1,
    "label": "Passenger",
    "options": "Flight Passenger",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fetch_from": "flight.source_airport_code",
@@ -54,7 +56,8 @@
    "fieldtype": "Link",
    "label": "Flight",
    "options": "Airplane Flight",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fetch_from": "flight.date_of_departure",
@@ -134,17 +137,24 @@
    "fieldtype": "Data",
    "label": "Seat",
    "read_only": 1
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fetch_if_empty": 1,
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-22 02:54:57.542039",
+ "modified": "2026-03-16 05:14:43.782531",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

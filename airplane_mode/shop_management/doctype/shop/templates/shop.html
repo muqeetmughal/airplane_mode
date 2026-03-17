@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop Details</title>
+    <link rel="stylesheet" href="/assets/airplane_mode/css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0e7ff 0%, #fafafa 100%);
+            min-height: 100vh;
+            margin: 0;
+        }
+        .shop-detail-container {
+            max-width: 700px;
+            margin: 48px auto;
+            padding: 32px;
+            border: none;
+            border-radius: 16px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff;
+            box-shadow: 0 8px 32px rgba(60, 80, 120, 0.12);
+        }
+        h2 {
+            font-size: 2rem;
+            color: #2d3a4a;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+        .shop-field {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+        }
+        .shop-label {
+            font-weight: 600;
+            color: #4b5563;
+            min-width: 120px;
+            font-size: 1rem;
+        }
+        .shop-value {
+            color: #1f2937;
+            font-size: 1rem;
+        }
+        .section-break {
+            border-bottom: 1px solid #e5e7eb;
+            margin: 28px 0;
+        }
+        .columns {
+            display: flex;
+            gap: 36px;
+            flex-wrap: wrap;
+        }
+        .column {
+            flex: 1;
+            min-width: 220px;
+        }
+        .shop-link {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 12px 28px;
+            background: linear-gradient(90deg, #6366f1 0%, #3b82f6 100%);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .shop-link:hover {
+            background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.22);
+        }
+    </style>
+</head>
+<body>
+    <div class="shop-detail-container">
+        <h2>{{ shop_name }}</h2>
+        <div class="shop-field">
+            <span class="shop-label">Shop Code:</span>
+            <span class="shop-value">{{ shop_code }}</span>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="shop-field">
+                    <span class="shop-label">Area:</span>
+                    <span class="shop-value">{{ area }}</span>
+                </div>
+                <div class="shop-field">
+                    <span class="shop-label">Type:</span>
+                    <span class="shop-value">{{ type }}</span>
+                </div>
+                <div class="shop-field">
+                    <span class="shop-label">Airport:</span>
+                    <span class="shop-value">{{ airport }}</span>
+                </div>
+                <div class="shop-field">
+                    <span class="shop-label">Status:</span>
+                    <span class="shop-value">{{ status }}</span>
+                </div>
+                <div class="shop-field">
+                    <span class="shop-label">Monthly Rent:</span>
+                    <span class="shop-value">{{ monthly_rent }}</span>
+                </div>
+                <div class="shop-field">
+                    <span class="shop-label">Route:</span>
+                    <span class="shop-value">{{ route }}</span>
+                </div>
+                <div class="shop-field">
+                    <span class="shop-label">Publish:</span>
+                    <span class="shop-value">{{ publish }}</span>
+                </div>
+            </div>
+            <div class="column">
+                <div class="shop-field">
+                    <span class="shop-label">Tenant Details:</span>
+                    <span class="shop-value">{{ tenant_details }}</span>
+                </div>
+                <div class="shop-field">
+                    <span class="shop-label">Contract Expiry:</span>
+                    <span class="shop-value">{{ contract_expiry }}</span>
+                </div>
+                <a href="/interest-in-shop/new?shop={{ shop_name }}" class="shop-link">Submit Inquiry</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

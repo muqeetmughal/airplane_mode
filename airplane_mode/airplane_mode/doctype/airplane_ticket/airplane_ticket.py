@@ -40,7 +40,7 @@ class AirplaneTicket(Document):
     def before_insert(self):
         self.seat = self._generate_seat()
 
-        flight_doc = frappe.get_doc("Flights", self.flight)
+        flight_doc = frappe.get_doc("Airplane Flight", self.flight)
         airplane_doc = frappe.get_doc("Airplane", flight_doc.airplane)
 
         issued_tickets = frappe.db.count(

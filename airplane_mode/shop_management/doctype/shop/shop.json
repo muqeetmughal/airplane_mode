@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}",
+ "creation": "2026-03-15 19:48:03.591820",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_code",
+  "shop_name",
+  "area",
+  "type",
+  "column_break_nyiy",
+  "airport",
+  "status",
+  "monthly_rent",
+  "route",
+  "publish",
+  "section_break_fqvh",
+  "tenant_details",
+  "column_break_arba",
+  "contract_expiry",
+  "section_break_tssp",
+  "shop_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_nyiy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nLeased",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_tssp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shop_image",
+   "fieldtype": "Attach Image",
+   "label": "Shop Image"
+  },
+  {
+   "fieldname": "monthly_rent",
+   "fieldtype": "Currency",
+   "label": "Monthly Rent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_fqvh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_arba",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant_details",
+   "fieldtype": "Link",
+   "label": "Tenant Details",
+   "options": "Tenant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_expiry",
+   "fieldtype": "Date",
+   "label": "Contract Expiry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shop_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Shop Type"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "publish",
+   "fieldtype": "Check",
+   "label": "Publish"
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "shop_image",
+ "index_web_pages_for_search": 1,
+ "is_published_field": "publish",
+ "links": [],
+ "modified": "2026-03-17 01:50:30.371358",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Shop",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "shops",
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "shop_name"
+}

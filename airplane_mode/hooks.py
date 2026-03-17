@@ -136,7 +136,11 @@ app_license = "mit"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
+doc_events = {
+	"Airplane Flight": {
+		"on_update": "airplane_mode.airplane_mode.doctype.airplane_flight.airplane_flight.sync_gate_number",
+	}
+}
 # doc_events = {
 # 	"*": {
 # 		"on_update": "method",
@@ -247,3 +251,14 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+fixtures = [
+    {"dt": "Shop Type"},
+    
+  
+]
+
+scheduler_events = {
+    "monthly": [
+        "airplane_mode.shop_management.scheduler_events.send_rent_reminders"
+    ]
+}

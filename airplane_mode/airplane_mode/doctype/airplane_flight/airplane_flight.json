@@ -9,6 +9,7 @@
   "section_break_j11z",
   "amended_from",
   "airplane",
+  "gate_number",
   "column_break_xfox",
   "status",
   "airport_details_section",
@@ -23,7 +24,9 @@
   "column_break_crqt",
   "time_of_departure",
   "is_published",
-  "route"
+  "route",
+  "section_break_lkrw",
+  "crew_members"
  ],
  "fields": [
   {
@@ -132,6 +135,21 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "fieldname": "section_break_lkrw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crew_members",
+   "fieldtype": "Table MultiSelect",
+   "label": "Crew Members",
+   "options": "Flight Crew Members"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "grid_page_length": 50,
@@ -144,11 +162,11 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-12-29 00:48:23.800843",
+ "modified": "2026-03-15 20:42:41.963241",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
